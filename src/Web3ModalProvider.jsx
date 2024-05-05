@@ -6,12 +6,14 @@ import { arbitrum, mainnet } from 'wagmi/chains'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
+const projectId = import.meta.env.PROJECT_ID;
+const url = import.meta.env.METADATA_URL;
+
 const queryClient = new QueryClient()
-const projectId = 'localhost'
 const metadata = {
   name: 'Web3Modal',
   description: 'Devico Test Solution',
-  url: 'https://localhost', 
+  url: url, 
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 }
 const chains = [mainnet, arbitrum]
